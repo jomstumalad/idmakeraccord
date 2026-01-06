@@ -1,0 +1,344 @@
+/* ======================
+   ROOT / GLOBAL FIX
+====================== */
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    color: #1f2937;
+}
+
+/* ======================
+   APP LAYOUT (100vh LOCK)
+====================== */
+.app {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+
+    max-width: 1600px;
+    margin: auto;
+    padding: 24px;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ======================
+   SIDEBAR (FIXED HEIGHT)
+====================== */
+.sidebar {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar h1 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* ======================
+   INPUT SCROLL AREA (KEY FIX)
+====================== */
+#inputContainer {
+    flex: 1;
+    min-height: 0;
+    /* 🔑 REQUIRED */
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* Nice scrollbar */
+#inputContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+#inputContainer::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 6px;
+}
+
+/* ======================
+   LABELS & INPUTS
+====================== */
+.label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* ======================
+   FORM CARD
+====================== */
+.form {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.form strong {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ======================
+   BUTTONS
+====================== */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 12px;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: white;
+}
+
+/* ======================
+   PREVIEW (100vh LOCKED)
+====================== */
+.preview {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======================
+   PREVIEW AUTO-SCALING
+====================== */
+.preview[data-count="1"] .id-grid {
+    transform: scale(1);
+}
+
+.preview[data-count="2"] .id-grid {
+    transform: scale(0.95);
+}
+
+.preview[data-count="3"] .id-grid {
+    transform: scale(0.9);
+}
+
+.preview[data-count="4"] .id-grid {
+    transform: scale(0.85);
+}
+
+/* ======================
+   PRINT AREA
+====================== */
+.print-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======================
+   ID GRID
+====================== */
+.id-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 470px);
+    gap: 12px;
+
+    width: max-content;
+    height: max-content;
+
+    place-content: center;
+    transform-origin: center;
+}
+
+/* ======================
+   ID CARD
+====================== */
+.id-card {
+    position: relative;
+    width: 470px;
+    height: 340px;
+}
+
+.id-card img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ======================
+   TEXT OVERLAY
+====================== */
+.text {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.name {
+    bottom: 90px;
+    left: 115px;
+}
+
+.position {
+    bottom: 70px;
+    left: 115px;
+}
+
+.idno {
+    bottom: 30px;
+    left: 115px;
+}
+
+.AddressContact,
+.Emergency {
+    white-space: normal;
+    width: 180px;
+    line-height: 1;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    /* 🔑 SMART FONT CONTROL */
+    font-size: clamp(9px, 1.8vw, 12px);
+}
+
+
+.AddressContact {
+    top: 40px;
+    left: 350px;
+}
+
+.Emergency {
+    top: 210px;
+    left: 350px;
+}
+
+.SSS {
+    top: 95px;
+    left: 290px;
+}
+
+.TIN {
+    top: 95px;
+    left: 410px;
+}
+
+.HDMF {
+    top: 125px;
+    left: 290px;
+}
+
+.Philhealth {
+    top: 125px;
+    left: 410px;
+}
+
+.DateHired {
+    top: 160px;
+    left: 290px;
+}
+
+.ValidUntil {
+    top: 160px;
+    left: 410px;
+}
+
+/* ======================
+   PRINT (UNCHANGED)
+====================== */
+@media print {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .print-area,
+    .print-area * {
+        visibility: visible;
+    }
+
+    .print-area {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .id-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 470px);
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+        height: 100vh;
+    }
+
+    .id-card {
+        page-break-inside: avoid;
+    }
+
+    @page {
+        margin: 0;
+    }
+}
