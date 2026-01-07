@@ -227,12 +227,12 @@ select:focus {
 }
 
 .name {
-    bottom: 90px;
+    bottom: 85px;
     left: 115px;
 }
 
 .position {
-    bottom: 70px;
+    bottom: 65px;
     left: 115px;
 }
 
@@ -267,27 +267,29 @@ select:focus {
 
 .SSS {
     top: 95px;
-    left: 290px;
+    left: 295px;
 }
 
 .TIN {
     top: 95px;
-    left: 410px;
+    left: 415px;
 }
 
 .HDMF {
-    top: 125px;
-    left: 290px;
+    top: 127px;
+    left: 295px;
+    font-size: 10px;
 }
 
 .Philhealth {
-    top: 125px;
-    left: 410px;
+    top: 127px;
+    left: 420px;
+    font-size: 10px;
 }
 
 .DateHired {
     top: 160px;
-    left: 290px;
+    left: 292px;
 }
 
 .ValidUntil {
