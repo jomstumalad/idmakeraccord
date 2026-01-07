@@ -243,15 +243,15 @@ select:focus {
 
 .AddressContact,
 .Emergency {
-    white-space: normal;
-    width: 180px;
-    line-height: 1;
+    white-space: pre-line;
+    /* 🔥 THIS MAKES \n WORK */
+    width: 220px;
+    line-height: 1.3;
+    font-size: 10px;
 
     word-wrap: break-word;
     overflow-wrap: break-word;
-
-    /* 🔑 SMART FONT CONTROL */
-    font-size: clamp(9px, 1.8vw, 12px);
+    text-align: center;
 }
 
 
@@ -277,13 +277,14 @@ select:focus {
 
 .HDMF {
     top: 127px;
-    left: 295px;
+    left: 415px;
     font-size: 10px;
+    
 }
 
 .Philhealth {
     top: 127px;
-    left: 420px;
+    left: 295px;
     font-size: 10px;
 }
 
