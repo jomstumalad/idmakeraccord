@@ -39,7 +39,7 @@ function renderIDs() {
         const card = document.createElement("div");
         card.className = "id-card";
         card.innerHTML = `
-            <img src="template/Picture1.png">
+            <img src="Picture1.png">
 
             <div id="name${i}" class="text name"></div>
             <div id="position${i}" class="text position"></div>
@@ -132,3 +132,4 @@ function update(index, field, value) {
    INITIAL LOAD
 ====================== */
 renderIDs();
+
