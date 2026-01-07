@@ -39,7 +39,7 @@ function renderIDs() {
         const card = document.createElement("div");
         card.className = "id-card";
         card.innerHTML = `
-            <img src="Picture1.png">
+            <img src="template/Picture1.png">
 
             <div id="name${i}" class="text name"></div>
             <div id="position${i}" class="text position"></div>
@@ -62,7 +62,7 @@ function renderIDs() {
         /* ======================
            SYSTEM-FIXED VALUES
         ====================== */
-        update(i, "ValidUntil", "12/31/2026");
+        update(i, "ValidUntil", "12-31-2026");
     }
 }
 
@@ -117,7 +117,7 @@ function handlePaste(e, index) {
     update(index, "Emergency", emergency);
 
     // 🔒 Ensure Valid Until is NEVER overridden
-    update(index, "ValidUntil", "12/31/2026");
+    update(index, "ValidUntil", "12-31-2026");
 }
 
 /* ======================
@@ -132,5 +132,3 @@ function update(index, field, value) {
    INITIAL LOAD
 ====================== */
 renderIDs();
-
-
